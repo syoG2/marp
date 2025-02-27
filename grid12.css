@@ -1,0 +1,99 @@
+/* @theme grid12 */
+
+@import "default";
+
+:root {
+    --t: 2;
+    --b: -1;
+    --l: 1;
+    --r: -1;
+    --underline-color: rgb(0, 0, 0);
+    --highlight-color: rgba(255, 255, 0, 0.5);
+    --h1-color: rgb(0, 0, 0);
+    --color-background-paginate: rgba(32, 32, 40, 0.05);
+}
+
+
+header {
+    top: 0px;
+}
+
+footer {
+    bottom: 0px;
+}
+
+section {
+    font-family: 'Hiragino Kaku Gothic Pro';
+    padding: 25px 70px 10px 70px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    /* gap: 10px; */
+}
+
+
+section>h1:first-of-type {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    padding: 0;
+    margin: 0;
+    border-bottom: 5px solid rgb(0, 0, 0);
+    text-align: left;
+}
+
+section :not(header, footer) {
+    grid-column: var(--l) / var(--r);
+    grid-row: var(--t) / var(--b);
+}
+
+section::after {
+    position: absolute;
+    padding-right: 30px;
+    padding-left: 60px;
+    padding-bottom: 21px;
+    padding-top: 42px;
+    right: 0;
+    bottom: 0;
+    font-size: 24px;
+    color: var(--paginate-color);
+    background: linear-gradient(-45deg,
+            var(--color-background-paginate) 50%,
+            transparent 50%);
+}
+
+section.title h1 {
+    grid-row: 6;
+    text-align: center;
+}
+
+section.title :not(h1) {
+    grid-row: 7/12;
+    text-align: center;
+}
+
+section div.bib {
+    padding: 0;
+    margin: 0;
+    font-size: 0.5em;
+    align-content: end;
+}
+
+section div.bib * {
+    padding: 0;
+    margin: 0;
+}
+
+section span.underline {
+    border-bottom: 3px solid var(--underline-color);
+}
+
+section span.highlight {
+    background-color: var(--highlight-color);
+}
+
+section .frame {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
