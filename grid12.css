@@ -3,16 +3,17 @@
 @import "default";
 
 :root {
+    /* gridlayout用の変数 */
     --t: 2;
     --b: -1;
     --l: 1;
     --r: -1;
+
     --underline-color: rgb(0, 0, 0);
     --highlight-color: rgba(255, 255, 0, 0.5);
     --h1-color: rgb(0, 0, 0);
     --color-background-paginate: rgba(32, 32, 40, 0.05);
 }
-
 
 header {
     top: 0px;
@@ -24,15 +25,15 @@ footer {
 
 section {
     font-family: 'Hiragino Kaku Gothic Pro';
-    padding: 25px 70px 10px 70px;
+    padding: 25px 70px 25px 70px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    /* gap: 10px; */
 }
 
 
 section>h1:first-of-type {
+    /* ページのタイトル */
     grid-column: 1 / -1;
     grid-row: 1;
     padding: 0;
@@ -47,6 +48,7 @@ section :not(header, footer) {
 }
 
 section::after {
+    /* ページ数 */
     position: absolute;
     padding-right: 30px;
     padding-left: 60px;
@@ -72,6 +74,7 @@ section.title :not(h1) {
 }
 
 section div.bib {
+    /* 参考文献 */
     padding: 0;
     margin: 0;
     font-size: 0.5em;
@@ -84,14 +87,17 @@ section div.bib * {
 }
 
 section span.underline {
+    /* 下線 */
     border-bottom: 3px solid var(--underline-color);
 }
 
 section span.highlight {
+    /* 文字の背景色 */
     background-color: var(--highlight-color);
 }
 
 section .frame {
+    /* 枠 */
     border: 1px solid black;
     border-radius: 10px;
     margin: 0px 0px 0px 0px;
