@@ -10,6 +10,8 @@
     --l: 1;
     --r: -1;
 
+    /* 文字の色 */
+    --color: var(--black1);
     /* 見出しの色 */
     --h1-color: var(--black1);
     /* ページ数表示の表示の背景色 */
@@ -213,6 +215,7 @@ section div.bib * {
 
 /* span要素のデザイン */
 section span {
+    color: var(--color);
     border-bottom: 3px solid var(--ul);
     background-color: var(--hl);
 }
