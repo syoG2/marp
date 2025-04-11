@@ -14,7 +14,9 @@
     /* header、footerの色 */
     --header-footer-color: var(--white5);
     /* ページ番号の色 */
-    --paginate-color: var(--white5);
+    --paginate-color: var(--white6);
+    /* テーマカラー */
+    --theme-color: var(--blue4);
 
     /* gridlayout用の変数 */
     --t: 2;
@@ -23,7 +25,7 @@
     --r: -1;
 
     /* 見出しの色 */
-    --h1-color: var(--blue4);
+    --h1-color: var(--theme-color);
 
     /* drawioのパレットの色 */
     --white1: #ffffff;
@@ -238,10 +240,12 @@ h6 {
 
 /* タイトルクラス */
 section.title {
-    background-color: var(--blue4);
+    background-color: var(--theme-color);
     color: var(--white1);
     align-items: center;
     --t: 1;
+    --paginate-color: var(--white1);
+    --header-footer-color: var(--white1);
 }
 
 section.title h1 {
@@ -251,15 +255,17 @@ section.title h1 {
 
 /* アウトラインクラス */
 section.outline h2 {
-    color: var(--blue4);
+    color: var(--theme-color);
 }
 
 /* セクションクラス */
 section.section {
-    background-color: var(--blue4);
+    background-color: var(--theme-color);
     color: var(--white1);
     align-items: center;
     --t: 1;
+    --paginate-color: var(--white1);
+    --header-footer-color: var(--white1);
 }
 
 section.section h1 {

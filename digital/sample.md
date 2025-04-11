@@ -4,6 +4,10 @@ theme: digital
 math: katex
 paginate: true
 # size: 4:3
+style: |
+    :root {
+        --theme-color: var(--orange6)
+    }
 ---
 <!--
 _class: title
