@@ -241,13 +241,12 @@ section.title {
     background-color: var(--blue4);
     color: var(--white1);
     align-items: center;
+    --t: 1;
 }
 
 section.title h1 {
     font-size: 2em;
     color: var(--white1);
-    grid-column: 1/-1;
-    grid-row: 1/-1
 }
 
 /* アウトラインクラス */
@@ -260,6 +259,7 @@ section.section {
     background-color: var(--blue4);
     color: var(--white1);
     align-items: center;
+    --t: 1;
 }
 
 section.section h1 {
