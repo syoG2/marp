@@ -196,8 +196,9 @@ section :not(header, footer) {
     grid-row: var(--t)/var(--b);
 }
 
-/* 番号付きリストの番号が親要素の外にはみ出さないようにする */
-section ol {
+/* リストの番号が親要素の外にはみ出さないようにする */
+section ol,
+section ul {
     padding-left: 1.5em;
 }
 
