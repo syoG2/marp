@@ -246,6 +246,8 @@ section.title {
 section.title h1 {
     font-size: 2em;
     color: var(--white1);
+    grid-column: 1/-1;
+    grid-row: 1/-1
 }
 
 /* アウトラインクラス */
