@@ -1,5 +1,6 @@
 {
     "markdown.marp.themes": [
-        "./grid12.css"
+        "./digital/digital.css",
+        "./grid12/grid12.css"
     ]
 }
