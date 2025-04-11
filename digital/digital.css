@@ -1,4 +1,266 @@
 /* 参考：https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/1948e3cd-736a-4378-9e31-039b08d11106/a119bc3c/20240531_resources_dashboard-guidebook_guidebook_01.pdf */
-/* @theme digital */
+/*
+@theme digital
+@auto-scaling true
+@size 16:9 1280px 720px
+@size 4:3 960px 720px
+*/
 
-@import "default";
+:root {
+    /* 背景色 */
+    background-color: var(--white1);
+    /* 文字の色 */
+    color: var(--black1);
+    /* header、footerの色 */
+    --header-footer-color: var(--white5);
+    /* ページ番号の色 */
+    --paginate-color: var(--white5);
+
+    /* gridlayout用の変数 */
+    --t: 2;
+    --b: -1;
+    --l: 1;
+    --r: -1;
+
+    /* 見出しの色 */
+    --h1-color: var(--blue4);
+
+    /* drawioのパレットの色 */
+    --white1: #ffffff;
+    --white2: #e6e6e6;
+    --white3: #cccccc;
+    --white4: #b3b3b3;
+    --white5: #999999;
+    --white6: #808080;
+    --white7: #666666;
+    --white8: #4d4d4d;
+    --white9: #333333;
+    --white10: #1a1a1a;
+    --black1: #000000;
+    --red1: #ffcccc;
+    --red2: #ff9999;
+    --red3: #ff6666;
+    --red4: #ff3333;
+    --red5: #ff0000;
+    --red6: #cc0000;
+    --red7: #990000;
+    --red8: #660000;
+    --red9: #330000;
+    --orange1: #ffe6cc;
+    --orange2: #ffcc99;
+    --orange3: #ffb366;
+    --orange4: #ff9933;
+    --orange5: #ff8000;
+    --orange6: #cc6600;
+    --orange7: #994c00;
+    --orange8: #663300;
+    --orange9: #331a00;
+    --yellow1: #ffffcc;
+    --yellow2: #ffff99;
+    --yellow3: #ffff66;
+    --yellow4: #ffff33;
+    --yellow5: #ffff00;
+    --yellow6: #cccc00;
+    --yellow7: #999900;
+    --yellow8: #666600;
+    --yellow9: #333300;
+    --yellowGreen1: #E6FFCC;
+    --yellowGreen2: #CCFF99;
+    --yellowGreen3: #B3FF66;
+    --yellowGreen4: #99FF33;
+    --yellowGreen5: #80FF00;
+    --yellowGreen6: #66CC00;
+    --yellowGreen7: #4d9900;
+    --yellowGreen8: #336600;
+    --yellowGreen9: #1A3300;
+    --green1: #ccffcc;
+    --green2: #99ff99;
+    --green3: #66ff66;
+    --green4: #33ff33;
+    --green5: #00ff00;
+    --green6: #00cc00;
+    --green7: #009900;
+    --green8: #006600;
+    --green9: #003300;
+    --cyanGreen1: #ccffe6;
+    --cyanGreen2: #99ffcc;
+    --cyanGreen3: #66ffb3;
+    --cyanGreen4: #33ff99;
+    --cyanGreen5: #00ff80;
+    --cyanGreen6: #00cc66;
+    --cyanGreen7: #00994d;
+    --cyanGreen8: #006633;
+    --cyanGreen9: #00331a;
+    --cyan1: #ccffff;
+    --cyan2: #99ffff;
+    --cyan3: #66ffff;
+    --cyan4: #33ffff;
+    --cyan5: #00ffff;
+    --cyan6: #00cccc;
+    --cyan7: #009999;
+    --cyan8: #006666;
+    --cyan9: #003333;
+    --cyanBlue1: #cce5ff;
+    --cyanBlue2: #99ccff;
+    --cyanBlue3: #66b2ff;
+    --cyanBlue4: #3399ff;
+    --cyanBlue5: #007fff;
+    --cyanBlue6: #0066cc;
+    --cyanBlue7: #004c99;
+    --cyanBlue8: #003366;
+    --cyanBlue9: #001933;
+    --blue1: #ccccff;
+    --blue2: #9999ff;
+    --blue3: #6666ff;
+    --blue4: #3333ff;
+    --blue5: #0000ff;
+    --blue6: #0000cc;
+    --blue7: #000099;
+    --blue8: #000066;
+    --blue9: #000033;
+    --purple1: #e5ccff;
+    --purple2: #cc99ff;
+    --purple3: #b266ff;
+    --purple4: #9933ff;
+    --purple5: #7f00ff;
+    --purple6: #6600cc;
+    --purple7: #4c0099;
+    --purple8: #330066;
+    --purple9: #190033;
+    --pink1: #ffccff;
+    --pink2: #ff99ff;
+    --pink3: #ff66ff;
+    --pink4: #ff33ff;
+    --pink5: #ff00ff;
+    --pink6: #cc00cc;
+    --pink7: #990099;
+    --pink8: #660066;
+    --pink9: #330033;
+    --pinkRed1: #ffcce6;
+    --pinkRed2: #ff99cc;
+    --pinkRed3: #ff66b3;
+    --pinkRed4: #ff3399;
+    --pinkRed5: #ff0080;
+    --pinkRed6: #cc0066;
+    --pinkRed7: #99004d;
+    --pinkRed8: #660033;
+    --pinkRed9: #33001a;
+}
+
+/* headerとfooterの設定 */
+header,
+footer {
+    margin: 0;
+    position: absolute;
+    left: 30px;
+    color: var(--header-footer-color);
+    font-size: 18px;
+}
+
+header {
+    top: 0px;
+}
+
+footer {
+    bottom: 0px;
+}
+
+/* スライドの通常スタイル */
+section {
+    font-family: 'Hiragino Kaku Gothic Pro';
+    padding: 25px 70px 25px 70px;
+    height: 720px;
+    width: 1280px;
+    font-size: 29px;
+
+    /* グリッドレイアウト */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 見出し部分(70px)と残りを12等分 */
+    grid-template-rows: 70px repeat(12, 1fr);
+}
+
+/* 見出し部分 */
+section>h1:first-of-type {
+    grid-column: var(--l) / var(--r);
+    grid-row: 1/2;
+}
+
+/* 見出し以外の部分のレイアウト */
+section :not(header, footer) {
+    padding: 0;
+    margin: 0;
+    grid-column: var(--l)/var(--r);
+    grid-row: var(--t)/var(--b);
+}
+
+/* 番号付きリストの番号が親要素の外にはみ出さないようにする */
+section ol {
+    padding-left: 1.5em;
+}
+
+/* ページ数のスタイル */
+section::after {
+    position: absolute;
+    padding: 0px;
+    right: 30px;
+    bottom: 21px;
+    font-size: 24px;
+    color: var(--paginate-color);
+}
+
+/* 各headingの文字サイズ */
+h1 {
+    margin: 0;
+    color: var(--h1-color);
+    font-size: 1.6em;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+h3 {
+    font-size: 1.1em;
+}
+
+h4 {
+    font-size: 1.05em;
+}
+
+h5 {
+    font-size: 1.0em;
+}
+
+h6 {
+    font-size: 0.9em;
+}
+
+/* タイトルクラス */
+section.title {
+    background-color: var(--blue4);
+    color: var(--white1);
+    align-items: center;
+}
+
+section.title h1 {
+    font-size: 2em;
+    color: var(--white1);
+}
+
+/* アウトラインクラス */
+section.outline h2 {
+    color: var(--blue4);
+}
+
+/* セクションクラス */
+section.section {
+    background-color: var(--blue4);
+    color: var(--white1);
+    align-items: center;
+}
+
+section.section h1 {
+    font-size: 2em;
+    color: var(--white1);
+}
